@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 
 public class Main {
+
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class Main {
         app.exception(Exception.class, (e, ctx) -> {
             log.error("Unhandled error reached controller", e);
 
-            //throw new InternalServerErrorResponse(e.getClass().getSimpleName());
+            { throw new ForbiddenResponse("Off limits!"); }
         });
     }
 
