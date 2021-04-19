@@ -1,7 +1,5 @@
 import io.javalin.Javalin;
 import io.javalin.http.ForbiddenResponse;
-import io.javalin.http.InternalServerErrorResponse;
-import io.javalin.http.NotFoundResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +22,7 @@ public class Main {
         app.exception(Exception.class, (e, ctx) -> {
             log.error("Unhandled error reached controller", e);
 
-            throw new InternalServerErrorResponse(e.getClass().getSimpleName());
+            //throw new InternalServerErrorResponse(e.getClass().getSimpleName());
         });
     }
 
