@@ -10,7 +10,6 @@ public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-
         Javalin app = Javalin.create().start(Integer.parseInt(System.getenv("PORT")));
         app.get("/", ctx -> ctx.result("Welcome to root"));
 
