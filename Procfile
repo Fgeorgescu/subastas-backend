@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* Main -javaagent:/app/newrelic/newrelic.jar
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* Main
